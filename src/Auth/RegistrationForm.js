@@ -21,7 +21,7 @@ const RegistrationForm = ({}) => {
       <TextInput value={phone} title="+7 (999) 876-54-32" setter={setPhone} formatter={e => formatPhoneNumber(e)}/>
       <PasswordInput value={password} title={"Пароль"} setter={setPassword}/>
       <span>Введите, не менее 6 символов</span>
-      <ButtonFilled type={"submit"} title={"Зарегестрироваться"}/>
+      <ButtonFilled type={"submit"} title={"Зарегистрироваться"}/>
     </form>
   )
 };
