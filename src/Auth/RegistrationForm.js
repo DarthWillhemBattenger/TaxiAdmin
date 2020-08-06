@@ -4,7 +4,7 @@ import {formatPhoneNumber} from "../Help/Formatter";
 import s from "./style/AuthForm.module.css"
 import {ButtonFilled} from "../Components/common/Buttons";
 
-const RegistrationForm = ({}) => {
+const RegistrationForm = () => {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [email, setEmail] = useState("");

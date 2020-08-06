@@ -7,6 +7,7 @@ import { Registration } from './Auth/Registration';
 import { RegistrationDone } from './Auth/RegistrationDone'
 
 function App() {
+	// eslint-disable-next-line
 	const [isAuth, setIsAuth] = useState(false);
 	return (
 		<div className="App">
