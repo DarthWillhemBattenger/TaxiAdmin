@@ -1,0 +1,29 @@
+.tabsContainer {
+    padding: 16px 32px;
+    flex: 1 0 auto;
+}
+
+.navigationTab {
+    height: 58px;
+    padding: 17px;
+    margin-bottom: 24px;
+    font-family: var(--mainFontFamily);
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: 0.015em;
+    border-radius: 10px;
+}
+
+.selectedTab {
+    background-color: var(--accentColor);
+}
+
+.tabText {
+    color: var(--inputLineColor);
+    text-decoration: none;
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: 0.015em;
+}

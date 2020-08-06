@@ -30,8 +30,10 @@ code {
   --inputLineColor: #101010;
   --mutedInputLineColor: #10101060;
   --mutedColor: #3D3D3D;
+  --horizontalLineColor: #EDEDED;
   --mainFontFamily: 'AvenirNextCyr-Medium', sans-serif;
   --headerFont: 'Lato-bold', sans-serif;
   --mainBoxShadow: 0 10px 30px #CECECE40;
+  --navigationBoxShadow: 10px 0 30px 0px #CECECE40;
   --accentBoxShadow: 0 5px 15px #EEC94680;
 }

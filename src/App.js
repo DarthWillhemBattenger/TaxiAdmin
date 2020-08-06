@@ -1,36 +1,26 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
-import './Assets/avenirnextcyr-medium.css';
-import { Auth } from './Auth/Auth';
-import { Registration } from './Auth/Registration';
-import { RegistrationDone } from './Auth/RegistrationDone'
+import { BrowserRouter as Router } from 'react-router-dom';
+import s from './App.module.css';
+import { Navigation } from './MainScreen/Navigation';
+import { Routes } from './Routes';
 
 function App() {
 	// eslint-disable-next-line
-	const [isAuth, setIsAuth] = useState(false);
+	const [isAuth, setIsAuth] = useState(true);
 	return (
-		<div className="App">
+		<div className={s.appScreen}>
 			<Router>
-				<Switch>
-					{isAuth ? (
-						''
-					) : (
-						<>
-							<Route exact path="/auth">
-								<Auth />
-							</Route>
-							<Route exact path="/registration">
-								<Registration />
-							</Route>
-							<Route exact path="/done">
-								<RegistrationDone />
-							</Route>
-						</>
-					)}
-
-					<Route>" "</Route>
-				</Switch>
+				{isAuth && <Navigation />}
+				{isAuth ? (
+					<div className={s.pageWithNavigation}>
+						<Routes isAuth={isAuth} />
+					</div>
+				) : (
+					<div>
+						<Routes isAuth={isAuth} />
+					</div>
+				)}
+				
 			</Router>
 		</div>
 	);
