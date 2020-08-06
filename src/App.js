@@ -15,7 +15,7 @@ function App() {
 						''
 					) : (
 						<>
-							<Route exact path="/">
+							<Route exact path="/auth">
 								<Auth />
 							</Route>
 							<Route exact path="/registration">

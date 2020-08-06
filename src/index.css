@@ -1,5 +1,5 @@
-@import url("./Assets/avenirnextcyr-medium.css");
-/*AvenirNextCyr-Medium*/
+@import url('./Assets/avenirnextcyr-medium.css');
+@import url('./Assets/lato.css');
 
 body {
   margin: 0;
@@ -19,4 +19,19 @@ code {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+:root {
+  --defaultBackgroundColor: #F9F9F9;
+  --componentBackgroundColor: #FFFFFF;
+  --accentColor: #EEC946;
+  --accentColorHover: #FCD247;
+  --mainColor: #000000;
+  --inputLineColor: #101010;
+  --mutedInputLineColor: #10101060;
+  --mutedColor: #3D3D3D;
+  --mainFontFamily: 'AvenirNextCyr-Medium', sans-serif;
+  --headerFont: 'Lato-bold', sans-serif;
+  --mainBoxShadow: 0 10px 30px #CECECE40;
+  --accentBoxShadow: 0 5px 15px #EEC94680;
 }

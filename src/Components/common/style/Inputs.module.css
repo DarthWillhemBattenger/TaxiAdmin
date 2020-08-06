@@ -1,14 +1,14 @@
 .TextInput {
     padding: 16px 16px 14px;
-    font-family: Avenir Next Cyr, "sans-serif";
+    font-family: var(--mainFontFamily);
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.015em;
-    color: #3D3D3D;
+    color: var(--mutedColor);
     border: none;
-    border-bottom:  1px solid #10101060;
+    border-bottom:  1px solid var(--mutedInputLineColor);
     transition: .2s linear;
 }
 
@@ -16,17 +16,17 @@
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.015em;
-    color: #3D3D3D;
+    color: var(--mutedColor);
     opacity: 0.4;
 }
 
 .TextInput:hover {
-    border-color: #101010;
+    border-color: var(--inputLineColor);
 }
 
 .TextInput:focus {
     outline: none;
-    border-color: #101010;
+    border-color: var(--inputLineColor);
 }
 
 

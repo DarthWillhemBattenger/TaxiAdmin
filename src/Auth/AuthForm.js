@@ -13,8 +13,8 @@ const AuthForm = () => {
       <p className={s.AuthTitle}>Вход</p>
       <TextInput value={text} setter={setText} title={"+7 (999) 876-54-32"} formatter={formatPhoneNumber}/>
       <PasswordInput value={text} setter={setText} title={"Пароль"}/>
-      <ButtonFilled title="Войти"/>
-      <ButtonVoid title="Регистрация" isLink={true} linkPath={"registration"}/>
+      <ButtonFilled title="Войти" additionClassName={s.signInButton}/>
+      <ButtonVoid title="Регистрация" isLink={true} linkPath={"registration"} additionClassName={s.registrationButton}/>
     </div>
   )
 };

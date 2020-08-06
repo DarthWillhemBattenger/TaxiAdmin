@@ -1,0 +1,13 @@
+.Title {
+    font-family: var(--headerFont);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--mainColor);
+    user-select: none;
+}
+
+.TitleSpan {
+    color: var(--accentColor);
+}

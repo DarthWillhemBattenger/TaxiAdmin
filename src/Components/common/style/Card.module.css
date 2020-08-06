@@ -1,0 +1,6 @@
+.card {
+    font-family: var(--mainFontFamily);
+    border-radius: 20px;
+    box-shadow: var(--mainBoxShadow);
+    background-color: var(--componentBackgroundColor);
+}

@@ -4,12 +4,12 @@ import s from "./style/Buttons.module.css";
 import {Link} from "react-router-dom";
 
 
-const ButtonVoid = ({action = () => {}, title = "", isLink = false, linkPath = "", type="button", ...props}) => {
+const ButtonVoid = ({action = () => {}, title = "", isLink = false, linkPath = "", type="button", additionClassName="", ...props}) => {
   if(isLink) {
     return (
       <Link to={linkPath}
             onClick={action}
-            className={`${s.Button} ${s.ButtonVoid}`}
+            className={`${additionClassName} ${s.Button} ${s.ButtonVoid}`}
             {...props}
       >
         {title}
@@ -17,7 +17,7 @@ const ButtonVoid = ({action = () => {}, title = "", isLink = false, linkPath = "
     )
   }
   return (
-    <button onClick={action} className={`${s.Button} ${s.ButtonVoid}`} {...props}>
+    <button onClick={action} className={`${additionClassName} ${s.Button} ${s.ButtonVoid}`} {...props}>
       {title}
     </button>
   )
@@ -25,12 +25,12 @@ const ButtonVoid = ({action = () => {}, title = "", isLink = false, linkPath = "
 
 
 
-const ButtonFilled = ({action = () => {}, title = "", isLink = false, linkPath = "", type="button", ...props}) => {
+const ButtonFilled = ({action = () => {}, title = "", isLink = false, linkPath = "", type="button", additionClassName="", ...props}) => {
   if(isLink) {
     return (
       <Link to={linkPath}
             onClick={action}
-            className={`${s.Button} ${s.ButtonFilled}`}
+            className={`${additionClassName} ${s.Button} ${s.ButtonFilled}`}
             {...props}
       >
         {title}
@@ -38,7 +38,7 @@ const ButtonFilled = ({action = () => {}, title = "", isLink = false, linkPath =
     )
   }
   return  (
-    <button type={type} onClick={action} className={`${s.Button} ${s.ButtonFilled}`} {...props}>
+    <button type={type} onClick={action} className={`${additionClassName} ${s.Button} ${s.ButtonFilled}`} {...props}>
       {title}
     </button>
   )

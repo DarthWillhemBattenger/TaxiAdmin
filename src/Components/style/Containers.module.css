@@ -1,4 +1,5 @@
 .CenterContainer {
+    background-color: var(--defaultBackgroundColor);
     display: flex;
     align-items: center;
     justify-content: center;
