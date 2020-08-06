@@ -20,8 +20,8 @@ const RegistrationForm = ({}) => {
       <TextInput value={email} title="E-mail" setter={setEmail}/>
       <TextInput value={phone} title="+7 (999) 876-54-32" setter={setPhone} formatter={e => formatPhoneNumber(e)}/>
       <PasswordInput value={password} title={"Пароль"} setter={setPassword}/>
-      <span>Введите, не менее 6 символов</span>
-      <ButtonFilled type={"submit"} title={"Зарегистрироваться"}/>
+      <span className={s.inputInformation}>Введите, не менее 6 символов</span>
+      <ButtonFilled type={"submit"} title={"Зарегистрироваться"} additionClassName={s.registrationButton}/>
     </form>
   )
 };

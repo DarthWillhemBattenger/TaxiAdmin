@@ -9,7 +9,7 @@ const Auth = () => {
   return (
     <CenterContainer>
       <Logo className={s.logo} />
-      <Card className={s.card}>
+      <Card className={s.cardAuth}>
         <AuthForm/>
       </Card>
     </CenterContainer>

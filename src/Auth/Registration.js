@@ -2,13 +2,17 @@ import React from "react";
 import {CenterContainer} from "../Components/Containers";
 import s from "./style/Auth.module.css";
 import {RegistrationForm} from "./RegistrationForm";
+import {Logo} from "../Components/common/Logo";
+import {Card} from "../Components/common/Card";
 
 
 const Registration = () => {
   return (
     <CenterContainer>
-      <p className={s.Title}>Диспетчер <span className={s.TitleSpan}>такси</span></p>
-      <RegistrationForm/>
+      <Logo className={s.logo}/>
+      <Card className={s.cardRegistration}>
+        <RegistrationForm/>
+      </Card>
     </CenterContainer>
   )
 };
