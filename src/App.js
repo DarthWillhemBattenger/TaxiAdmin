@@ -4,6 +4,7 @@ import './App.css';
 import './Assets/avenirnextcyr-medium.css';
 import { Auth } from './Auth/Auth';
 import { Registration } from './Auth/Registration';
+import { RegistrationDone } from './Auth/RegistrationDone'
 
 function App() {
 	const [isAuth, setIsAuth] = useState(false);
@@ -20,6 +21,9 @@ function App() {
 							</Route>
 							<Route exact path="/registration">
 								<Registration />
+							</Route>
+							<Route exact path="/done">
+								<RegistrationDone />
 							</Route>
 						</>
 					)}

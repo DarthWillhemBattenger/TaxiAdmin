@@ -23,10 +23,15 @@
 
 .registrationButton {
     margin-top: 32px;
+    color: var(--mutedColor) !important;
 }
 
-.registrationButton {
-    color: var(--mutedColor) !important;
+.text {
+    color: var(--mutedColor);
+    font-size: 18px;
+    line-height: 1.3333;
+    letter-spacing: 0.015em;
+    margin-top: -20px;
 }
 
 .AuthTitle {
