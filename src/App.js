@@ -16,7 +16,7 @@ function App() {
 						<Routes isAuth={isAuth} />
 					</div>
 				) : (
-					<div>
+					<div className={s.pageWithoutNavigation}>
 						<Routes isAuth={isAuth} />
 					</div>
 				)}

@@ -42,6 +42,8 @@
     border: none;
     background-color: var(--componentBackgroundColor);
     color: var(--mutedColor);
+    cursor: pointer;
+    transition: ease-in 0.1s background-color;
 }
 
 .filtersButton:after {
@@ -52,4 +54,13 @@
     height: 40px;
     border-left: 1px solid var(--horizontalLineColor);
     width: 1px;
+    transition: ease-in 0.1s opacity;
+}
+
+.filtersButton:hover {
+    background-color: var(--accentColorHover);
+}
+
+.filtersButton:hover::after {
+    opacity: 0;
 }
