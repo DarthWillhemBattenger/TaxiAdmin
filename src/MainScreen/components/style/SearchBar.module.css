@@ -1,0 +1,55 @@
+.container {
+    width: 100%;
+    height: 56px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+}
+
+.searchIconPlace {
+    padding: 19px;
+}
+
+.container > input {
+    flex: 1 0 auto;
+    border: none;
+    font-family: var(--mainFontFamily);
+    font-style: normal;
+    font-weight: 450;
+    font-size: 18px;
+    line-height: 1.2222;
+    letter-spacing: 0.015em;
+}
+
+.container > input::placeholder {
+    color: var(--mutedColor);
+    opacity: 0.6;
+}
+
+.container > input:focus {
+    outline: none;
+}
+
+.filtersButton {
+    position: relative;
+    height: 100%;
+    padding: 17px;
+    font-family: var(--mainFontFamily);
+    font-size: 18px;
+    line-height: 1.2222;
+    letter-spacing: 0.015rem;
+    border: none;
+    background-color: var(--componentBackgroundColor);
+    color: var(--mutedColor);
+}
+
+.filtersButton:after {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: -1px;
+    height: 40px;
+    border-left: 1px solid var(--horizontalLineColor);
+    width: 1px;
+}
