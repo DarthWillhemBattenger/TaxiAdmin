@@ -89,6 +89,7 @@ const driver = {
 const DriverInformationCard = (props) => {
     return (
         <Card className={`${s.container} ${props.cardStyle}`}>
+            <div className={s.closeButton}>&times;</div>
             <HorizontalSpacer className={s.cardHeadSpacer}>
                 <div className={s.headerInfoGroup}>
                     <img src={driver.photoURL} alt={`${driver.name} avatar`}/>
