@@ -1,0 +1,19 @@
+.financeListElement {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1.2083;
+    letter-spacing: 0.015em;
+    color: var(--inputLineColor);
+}
+
+.financeListElement > .financeText {
+    font-weight: normal;
+}
+
+.financeListElement > .financeMoney {
+    font-weight: 450;
+}

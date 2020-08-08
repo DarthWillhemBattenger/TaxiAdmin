@@ -4,6 +4,7 @@ import { Auth } from './Auth/Auth';
 import { Registration } from './Auth/Registration';
 import { RegistrationDone } from './Auth/RegistrationDone';
 import { EventPage } from './MainScreen/pages/EventPage';
+import { DriversPage } from './MainScreen/pages/DriversPage';
 
 const Routes = ({isAuth}) => {
     if (isAuth) {
@@ -11,6 +12,9 @@ const Routes = ({isAuth}) => {
             <Switch>
                 <Route exact path="/main/events">
                     <EventPage />
+                </Route>
+                <Route exact path="/main/drivers">
+                    <DriversPage />
                 </Route>
                 <Redirect to="/main/events" />
             </Switch>

@@ -26,8 +26,11 @@
     width: 100%;
     padding: 13px 15px 12px;
     background: var(--accentColor);
-    box-shadow: var(--accentBoxShadow);
     border-radius: 10px;
+}
+
+.yellowShadow {
+    box-shadow: var(--accentBoxShadow);
 }
 
 .ButtonFilled:hover {

@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 16px 24px;
+    cursor: pointer;
+}
+
+.driverPhotoBlock {
+    padding-right: 24px;
+}
+
+.driverPhotoBlock > img {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+}
+
+.nameBlock {
+    flex: 1 1 auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: 0.015em;
+    color: var(--inputLineColor);
+}
+
+.arrowBlock {
+    padding: 21px 0 21px 24px;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./style/TripBlock.module.css";
+import starIcon from '../../Assets/icons/star.svg';
 import { HorizontalSpacer } from "../../Components/common/inCard/HorizontalSpacer";
 
 /*
@@ -32,10 +33,17 @@ const TripBlock = (props) => {
                     )
                 )}
             </div>
-            <p className={s.address}><span>От: </span>{props.fromPoint}</p>
+            <p className={`${s.address} ${s.startPoint}`}><span>От: </span>{props.fromPoint}</p>
             <p className={s.address}><span>До: </span>{props.toPoint}</p>
             {props.isTripRatingOutput ? (
-                <div className={s.ratingBlock}>{props.rating}</div>
+                <div className={s.ratingBlock}>
+                    {props.rating}
+                    <div className={s.starContainer}>
+                        <object type="image/svg+xml" data={starIcon}>
+                            star icon
+                        </object>
+                    </div>
+                </div>
             ) : ""}
         </HorizontalSpacer>
     );

@@ -40,7 +40,7 @@
     font-weight: 450;
 }
 
-.address:nth-last-child(2) {
+.startPoint {
     margin-bottom: 16px;
 }
 
@@ -51,4 +51,24 @@
     line-height: 1.2142;
     letter-spacing: 0.015em;
     color: var(--inputLineColor);
+}
+
+.bigPrice {
+    font-style: normal;
+    font-weight: 450;
+    font-size: 18px;
+    line-height: 1.2222;
+    letter-spacing: 0.015em;
+    color: var(--inputLineColor);
+}
+
+.ratingBlock {
+    display: flex;
+    position: absolute;
+    bottom: 16px;
+    right: 12px;
+}
+
+.ratingBlock .starContainer {
+    margin-left: 0.5em;
 }
