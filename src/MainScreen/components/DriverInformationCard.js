@@ -127,12 +127,7 @@ const DriverInformationCard = (props) => {
                     Показать ещё
                 </div>
                 <h3 className={s.sectionHeader}>Финансы</h3>
-                <HorizontalSpacer >
-                    <div className={s.financeListElement}>
-                        <div className={s.financeText}>Заработано:</div>
-                        <div className={s.financeMoney}>{driver.finance.income} ₽</div>
-                    </div>
-                </HorizontalSpacer>
+                <FinancesListElement description="Заработано:" cost={driver.finance.income}/>
                 <h3 className={s.sectionHeader}>Транзакции</h3>
                 <HorizontalSpacer >
                     {driver.finance.transactions.map((transaction) => (
