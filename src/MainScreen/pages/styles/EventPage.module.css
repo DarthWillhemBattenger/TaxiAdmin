@@ -1,3 +1,68 @@
 .container {
     padding: 25px 42px 37px;
 }
+
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+.cardContainer > div {
+    flex: 0 0 33.3333%
+}
+
+.cardContainer > div {
+    flex: 0 0 calc(33.3333% - 26.6666px);
+    margin-right: 40px;
+}
+
+.cardContainer > div:last-child {
+    margin-right: 0;
+}
+
+.card {
+    position: relative;
+    flex: 1 0 auto;
+    overflow: hidden;
+    max-height: 83vh;
+}
+
+.cardHeadSpacer {
+    padding: 24px;
+}
+
+.cardHeadSpacer > h3 {
+    font-weight: 450;
+    font-size: 24px;
+    line-height: 1.2803;
+    letter-spacing: 0.015em;
+    color: var(--inputLineColor);
+}
+
+.scrollableElement {
+    flex: 1 0 auto;
+    overflow: auto;
+    max-height: 100%;
+}
+
+.scrollableElement::-webkit-scrollbar {
+    width: 8px;
+    padding: 0 1px 20px 1px;
+}
+
+.scrollableElement::-webkit-scrollbar-thumb {
+    border-radius: 9999rem;
+    background-color: var(--mutedColor);
+}
+
+.bottomGradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 47px;
+    width: calc(100% - 8px);
+    background: linear-gradient(180deg, #FFFFFF00 0%, var(--componentBackgroundColor) 18.23%);
+    border-radius: 0 0 20px 20px;
+}

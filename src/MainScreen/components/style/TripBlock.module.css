@@ -1,0 +1,54 @@
+.container {
+    padding: 16px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tripNumber {
+    flex: 1 0 auto;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 18px;
+    line-height: 1.2222;
+    letter-spacing: 0.015em;
+    color: var(--inputLineColor);
+}
+
+.tripTime {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.2142;
+    color: var(--inputLineColor);
+}
+
+.address {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.015em;
+    color: var(--mutedColor);
+}
+
+.address > span {
+    font-weight: 450;
+}
+
+.address:nth-last-child(2) {
+    margin-bottom: 16px;
+}
+
+.smallPrice {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.2142;
+    letter-spacing: 0.015em;
+    color: var(--inputLineColor);
+}
