@@ -1,4 +1,5 @@
 .container {
+    position: relative;
     padding: 16px;
 }
 
@@ -71,4 +72,10 @@
 
 .ratingBlock .starContainer {
     margin-left: 0.5em;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 19px;
+    right: 20px;
 }

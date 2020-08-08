@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./style/TripBlock.module.css";
 import starIcon from '../../Assets/icons/star.svg';
+import arrowIcon from "../../Assets/icons/arrow.svg";
 import { HorizontalSpacer } from "../../Components/common/inCard/HorizontalSpacer";
 
 /*
@@ -44,6 +45,11 @@ const TripBlock = (props) => {
                         </object>
                     </div>
                 </div>
+            ) : ""}
+            {props.isNeedArrow ? (
+                <object className={s.arrow} type="image/svg+xml" data={arrowIcon}>
+                    arrow icon
+                </object>
             ) : ""}
         </HorizontalSpacer>
     );
