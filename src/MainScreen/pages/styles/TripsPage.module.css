@@ -99,6 +99,7 @@
 .buttonsContainer > button {
     flex: 1 0 100%;
     height: 50px;
+    margin-top: 20px;
     text-align: center;
     border-radius: 10px;
 }
@@ -109,13 +110,11 @@
 }
 
 .buttonsContainer > .callToCustomerButton {
-    margin-top: 20px;
     border: 1px solid #FFFFFF00;
     background-color: var(--accentMutedColor);
 }
 
 .buttonsContainer > .CancelTripButton {
-    margin-top: 20px;
     border-radius: 10px;
     border: 1px solid var(--mutedColor);
     color: var(--mutedColor);
@@ -126,4 +125,25 @@
     background-color: var(--accentColorHover);
     box-shadow: var(--accentBoxShadow);
     border: 1px solid #FFFFFF00;
+}
+
+.checkBoxWithLabelContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkBoxWithLabelContainer > .description {
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.015em;
+    color: var(--mainColor);
+}
+
+.checkBoxWithLabelContainer .checkBox {
+    height: 20px;
+    width: 20px;
 }

@@ -8,6 +8,7 @@ import { UniversalButton } from '../../Components/common/Buttons';
 import { CloseButton } from '../../Components/common/inCard/CloseButton';
 import { BottomGradient } from '../../Components/common/inCard/BottomGradient';
 import { ScrollableElement } from '../../Components/common/inCard/ScrollableElement';
+import { CheckBox } from '../../Components/common/CheckBox';
 
 const longTrips = [
     {
@@ -176,8 +177,12 @@ const TripsPage = () => {
                             <p className={`${s.orderInfoText} ${s.priceHighlight}`}>{longTrips[0].tripCost}₽</p>
                         </div>
                     </HorizontalSpacer>
-                    <div>Важно для других диспетчеров</div>
+                    
                     <div className={s.buttonsContainer}>
+                        <div className={s.checkBoxWithLabelContainer}>
+                            <div className={s.description}>Важно для других диспетчеров</div>
+                            <CheckBox className={s.checkBox} checkBoxId="animatedCheckBox"/>
+                        </div>
                         <UniversalButton additionClassName={s.callToDriverButton}>
                             Звонок водителю
                         </UniversalButton>
