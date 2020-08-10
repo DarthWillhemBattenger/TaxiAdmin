@@ -5,6 +5,9 @@ import { Card } from '../../Components/common/Card';
 import { HorizontalSpacer } from '../../Components/common/inCard/HorizontalSpacer';
 import { TripBlock } from '../components/TripBlock';
 import { UniversalButton } from '../../Components/common/Buttons';
+import { ScrollableElement } from '../../Components/common/inCard/ScrollableElement';
+import { BottomGradient } from '../../Components/common/inCard/BottomGradient';
+import { CloseButton } from '../../Components/common/inCard/CloseButton';
 
 const longTrips = [
     {
@@ -117,16 +120,16 @@ const OrdersPage = () => {
                     <HorizontalSpacer className={s.cardHeadSpacer}>
                         <h3>Заказы</h3>
                     </HorizontalSpacer>
-                    <div className={s.scrollableElement}>
+                    <ScrollableElement>
                         {longTrips.map((trip) => (
                             <TripBlock key={trip.id} tripNumber={trip.tripNumber} tripTime={trip.tripTime} fromPoint={trip.fromPoint} toPoint={trip.toPoint} tripCost={trip.tripCost} isTripRatingOutput={false} isTimeOutput={false} isBigPriceOutput={true} isNeedArrow={true}/>
                         ))}
-                    </div>
-                    <div className={s.bottomGradient}></div>
+                    </ScrollableElement>
+                    <BottomGradient />
                 </Card>
                 <Card className={s.card}>
+                    <CloseButton />
                     <HorizontalSpacer className={s.orderInfo}>
-                        <div className={s.closeButton}>&times;</div>
                         <h3>№{longTrips[0].tripNumber}</h3>
                         <div className={s.orderInfoContainer}>
                             <span>От: </span>

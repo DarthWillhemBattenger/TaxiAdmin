@@ -5,6 +5,8 @@ import { Card } from '../../Components/common/Card';
 import { HorizontalSpacer } from '../../Components/common/inCard/HorizontalSpacer';
 import { CommentBlock } from '../components/CommentBlock';
 import { TripBlock } from '../components/TripBlock';
+import { ScrollableElement } from '../../Components/common/inCard/ScrollableElement';
+import { BottomGradient } from '../../Components/common/inCard/BottomGradient';
 
 const badComments = [
     {
@@ -204,34 +206,34 @@ const EventPage = () => {
                     <HorizontalSpacer className={s.cardHeadSpacer}>
                         <h3>Плохие Комментарии</h3>
                     </HorizontalSpacer>
-                    <div className={s.scrollableElement}>
+                    <ScrollableElement>
                         {badComments.map( (comment) => (
                             <CommentBlock key={comment.id} name={comment.name} date={comment.date} comment={comment.comment} />
                         ))}
-                    </div>
-                    <div className={s.bottomGradient}></div>
+                    </ScrollableElement>
+                    <BottomGradient />
                 </Card>
                 <Card className={s.card}>
                     <HorizontalSpacer className={s.cardHeadSpacer}>
                         <h3>Длительные поездки</h3>
                     </HorizontalSpacer>
-                    <div className={s.scrollableElement}>
+                    <ScrollableElement>
                         {longTrips.map((trip) => (
                             <TripBlock key={trip.id} tripNumber={trip.tripNumber} tripTime={trip.tripTime} fromPoint={trip.fromPoint} toPoint={trip.toPoint} isTripRatingOutput={false} isTimeOutput={true}/>
                         ))}
-                    </div>
-                    <div className={s.bottomGradient}></div>
+                    </ScrollableElement>
+                    <BottomGradient />
                 </Card>
                 <Card className={s.card}>
                     <HorizontalSpacer className={s.cardHeadSpacer}>
                         <h3>Пропущенные заказы</h3>
                     </HorizontalSpacer>
-                    <div className={s.scrollableElement}>
+                    <ScrollableElement>
                         {longTrips.map((trip) => (
                             <TripBlock key={trip.id} tripNumber={trip.tripNumber} tripTime={trip.tripTime} fromPoint={trip.fromPoint} toPoint={trip.toPoint} tripCost={trip.tripCost} isTripRatingOutput={false} isTimeOutput={false} isBigPriceOutput={false}/>
                         ))}
-                    </div>
-                    <div className={s.bottomGradient}></div>
+                    </ScrollableElement>
+                    <BottomGradient />
                 </Card>
             </div>
         </div>
