@@ -82,7 +82,7 @@ const DriversPage = () => {
                     </ScrollableElement>
                     <BottomGradient />
                 </Card>
-                <DriverInformationCard cardStyle={s.card}/>
+                <DriverInformationCard cardStyle={s.card} isNeedTrips={true} isNeedFinances={true}/>
             </div>
         </div>
     );

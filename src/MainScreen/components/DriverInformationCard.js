@@ -84,21 +84,29 @@ const DriverInformationCard = (props) => {
             <CloseButton />
             <DriverInformationCardHeader photoURL={driver.photoURL} name={driver.name} phone={driver.phone} rating={driver.rating}/>
             <ScrollableElement className={s.verticalSpacer}>
-                <h3 className={s.sectionHeader}>Все поездки</h3>
-                {driver.trips.map((trip) => (
-                    <TripBlock key={trip.id} tripNumber={trip.tripNumber} fromPoint={trip.fromPoint} toPoint={trip.toPoint} tripCost={trip.tripCost} rating={trip.rating} isTripRatingOutput={true} isTimeOutput={false} isBigPriceOutput={true}/>
-                ))}
-                <div className={s.showMoreButton}>
-                    Показать ещё
-                </div>
-                <h3 className={s.sectionHeader}>Финансы</h3>
-                <FinancesListElement description="Заработано:" cost={driver.finance.income}/>
-                <h3 className={s.sectionHeader}>Транзакции</h3>
-                <HorizontalSpacer>
-                    {driver.finance.transactions.map((transaction) => (
-                        <FinancesListElement key={transaction.id} date={transaction.date} description={transaction.description} cost={transaction.cost}/>
-                    ))}
-                </HorizontalSpacer>
+                {props.isNeedTrips ? (
+                    <>
+                        <h3 className={s.sectionHeader}>Все поездки</h3>
+                        {driver.trips.map((trip) => (
+                            <TripBlock key={trip.id} tripNumber={trip.tripNumber} fromPoint={trip.fromPoint} toPoint={trip.toPoint} tripCost={trip.tripCost} rating={trip.rating} isTripRatingOutput={true} isTimeOutput={false} isBigPriceOutput={true}/>
+                        ))}
+                        <div className={s.showMoreButton}>
+                            Показать ещё
+                        </div>
+                    </>
+                ) : ""}
+                {props.isNeedFinances ? (
+                    <>
+                        <h3 className={s.sectionHeader}>Финансы</h3>
+                        <FinancesListElement description="Заработано:" cost={driver.finance.income}/>
+                        <h3 className={s.sectionHeader}>Транзакции</h3>
+                        <HorizontalSpacer>
+                            {driver.finance.transactions.map((transaction) => (
+                                <FinancesListElement key={transaction.id} date={transaction.date} description={transaction.description} cost={transaction.cost}/>
+                            ))}
+                        </HorizontalSpacer>
+                    </>
+                ) : ""}
             </ScrollableElement>
             <BottomGradient />
         </Card>
