@@ -1,0 +1,84 @@
+input[type=checkbox] {
+	display: none;
+}
+
+.checkBox {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid var(--inputLineColor);
+    border-radius: 4px;
+    /*box-shadow: inset 0 0 3px 1px var(--mutedColor);*/
+    transition: border-color ease 0.2s;
+}
+
+.checkBox:active, .checkBox:hover {
+    border: 1px solid var(--accentColor);
+    box-shadow: var(--accentBoxShadow);
+}
+
+.checkBox::before, .checkBox::after {
+    position: absolute;
+    height: 0;
+    width: 4px;
+    background-color: var(--inputLineColor);
+    transform-origin: left top;
+    border-radius: 2px;
+    content: ' ';
+    transition: opacity ease .5s;
+}
+
+.checkBox::before {
+    top: 85%;
+    left: 55%;
+    box-shadow: 0 0 0 0 var(--componentBackgroundColor);
+    transform: rotate(-143deg);
+}
+
+.checkBox::after {
+    top: 25%;
+    left: 5%;
+    transform: rotate(-30deg);
+}
+
+input[type=checkbox]:checked + .checkBox, .checkBox.checked {
+    border-color: var(--accentColorHover);
+    box-shadow: var(--accentBoxShadow), inset 0 0 10px 3px var(--accentColor);
+}
+
+input[type=checkbox]:checked + .checkBox::after, .checkBox.checked::after {
+    /*height: 50px;*/
+    /*box-shadow: 0 0 0 2px var(--componentBackgroundColor);*/
+    animation: dothabottomcheck 0.2s ease 0s forwards;
+}
+
+input[type=checkbox]:checked + .checkBox::before, .checkBox.checked::before {
+    /*height: 120px;*/
+    /*box-shadow: 0 0 0 2px var(--componentBackgroundColor);*/
+    animation: dothatopcheck 0.4s ease 0s forwards;
+}
+
+@keyframes dothatopcheck {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 135%;
+    }
+}
+
+@keyframes dothabottomcheck {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 70%;
+    }
+}
