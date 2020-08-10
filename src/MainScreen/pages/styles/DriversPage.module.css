@@ -13,7 +13,7 @@
     flex: 0 0 33.3333%
 }
 
-.cardContainer > div {
+.cardContainer > div { 
     flex: 0 0 calc(33.3333% - 26.6666px);
     margin-right: 40px;
 }
