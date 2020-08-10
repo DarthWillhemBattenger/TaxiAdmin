@@ -2,18 +2,12 @@ import React from 'react';
 import s from './style/DriverInformationCard.module.css';
 import {Card} from '../../Components/common/Card';
 import {HorizontalSpacer} from '../../Components/common/inCard/HorizontalSpacer';
-import arrowIcon from '../../Assets/icons/arrowDown.svg';
-import starIcon from '../../Assets/icons/star.svg';
-//import { Link } from 'react-router-dom';
-import { ButtonFilled, UniversalButton } from '../../Components/common/Buttons';
 import { TripBlock } from './TripBlock';
 import { FinancesListElement } from './FinancesListElement';
-
-/*
-<object type="image/svg+xml" data={arrowIcon}>
-    arrow icon
-</object>
-*/
+import { DriverInformationCardHeader } from './DriverInformationCardHeader';
+import { BottomGradient } from '../../Components/common/inCard/BottomGradient';
+import { CloseButton } from '../../Components/common/inCard/CloseButton';
+import { ScrollableElement } from '../../Components/common/inCard/ScrollableElement';
 
 const driver = {
     id: "blgjkbldgjkahlghajkg1237895",
@@ -84,41 +78,12 @@ const driver = {
     }
 }
 
-//<TripBlock key={trip.id} tripNumber={trip.tripNumber} tripTime={trip.tripTime} fromPoint={trip.fromPoint} toPoint={trip.toPoint} isTripRatingOutput={false} isTimeOutput={true}/>
-
 const DriverInformationCard = (props) => {
     return (
         <Card className={`${s.container} ${props.cardStyle}`}>
-            <div className={s.closeButton}>&times;</div>
-            <HorizontalSpacer className={s.cardHeadSpacer}>
-                <div className={s.headerInfoGroup}>
-                    <img src={driver.photoURL} alt={`${driver.name} avatar`}/>
-                    <div className={s.mainInformation}>
-                        <h3>{driver.name}</h3>
-                        <div className={s.phoneAndRating}>
-                            <div className={s.phone}>{driver.phone}</div>
-                            <div className={s.rating}>
-                                {driver.rating}
-                                <div className={s.starContainer}>
-                                    <object type="image/svg+xml" data={starIcon}>
-                                        star icon
-                                    </object>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className={s.headerButtonsGroup}>
-                    <ButtonFilled additionClassName={s.mainButton} isNeedShadow={false} title="Вывести средства"/>
-                    <UniversalButton additionClassName={s.secondButton}>
-                        Другое
-                        <object type="image/svg+xml" className={s.arrow} data={arrowIcon}>
-                            arrow icon
-                        </object>
-                    </UniversalButton>
-                </div>
-            </HorizontalSpacer>
-            <div className={s.scrollableElement}>
+            <CloseButton />
+            <DriverInformationCardHeader photoURL={driver.photoURL} name={driver.name} phone={driver.phone} rating={driver.rating}/>
+            <ScrollableElement className={s.verticalSpacer}>
                 <h3 className={s.sectionHeader}>Все поездки</h3>
                 {driver.trips.map((trip) => (
                     <TripBlock key={trip.id} tripNumber={trip.tripNumber} fromPoint={trip.fromPoint} toPoint={trip.toPoint} tripCost={trip.tripCost} rating={trip.rating} isTripRatingOutput={true} isTimeOutput={false} isBigPriceOutput={true}/>
@@ -129,13 +94,13 @@ const DriverInformationCard = (props) => {
                 <h3 className={s.sectionHeader}>Финансы</h3>
                 <FinancesListElement description="Заработано:" cost={driver.finance.income}/>
                 <h3 className={s.sectionHeader}>Транзакции</h3>
-                <HorizontalSpacer >
+                <HorizontalSpacer>
                     {driver.finance.transactions.map((transaction) => (
                         <FinancesListElement key={transaction.id} date={transaction.date} description={transaction.description} cost={transaction.cost}/>
                     ))}
                 </HorizontalSpacer>
-            </div>
-            <div className={s.bottomGradient}></div>
+            </ScrollableElement>
+            <BottomGradient />
         </Card>
     );
 }

@@ -5,6 +5,8 @@ import { Card } from '../../Components/common/Card';
 import { HorizontalSpacer } from '../../Components/common/inCard/HorizontalSpacer';
 import { DriverListElement } from '../components/DriverListElement';
 import { DriverInformationCard } from '../components/DriverInformationCard';
+import { ScrollableElement } from '../../Components/common/inCard/ScrollableElement';
+import { BottomGradient } from '../../Components/common/inCard/BottomGradient';
 
 const drivers = [
     {
@@ -73,12 +75,12 @@ const DriversPage = () => {
                     <HorizontalSpacer className={s.cardHeadSpacer}>
                         <h3>Все водители</h3>
                     </HorizontalSpacer>
-                    <div className={s.scrollableElement}>
+                    <ScrollableElement>
                         {drivers.map( (driver) => (
-                            <DriverListElement key={driver.id} photoURL={driver.photoURL} name={driver.name} />
-                        ))}
-                    </div>
-                    <div className={s.bottomGradient}></div>
+                                <DriverListElement key={driver.id} photoURL={driver.photoURL} name={driver.name} />
+                            ))}
+                    </ScrollableElement>
+                    <BottomGradient />
                 </Card>
                 <DriverInformationCard cardStyle={s.card}/>
             </div>

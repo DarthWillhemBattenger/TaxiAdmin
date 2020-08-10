@@ -1,0 +1,9 @@
+.bottomGradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 47px;
+    width: calc(100% - 8px);
+    background: linear-gradient(180deg, #FFFFFF00 0%, var(--componentBackgroundColor) 18.23%);
+    border-radius: 0 0 20px 20px;
+}
