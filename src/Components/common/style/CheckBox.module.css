@@ -82,3 +82,42 @@ input[type=checkbox]:checked + .checkBox::before, .checkBox.checked::before {
         height: 70%;
     }
 }
+
+/* iOS like version */
+
+input[type=checkbox] + .iOSLikeCheckBox {
+    position: relative;
+    display: block;
+    width: 4em;
+    height: 2em;
+    background-color: var(--defaultBackgroundColor);
+    border: 2px solid var(--horizontalLineColor);
+    border-radius: 99999em;
+    transition: background-color 0.3s ease, border 0.3s ease;
+    outline: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+input[type=checkbox] + .iOSLikeCheckBox::after {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+    left: 0;
+    border-radius: 9999em;
+    border: 0.5px solid var(--horizontalLineColor);
+    background-color: var(--defaultBackgroundColor);
+    box-shadow: var(--hightContrastBoxShadow);
+    transition: all .2s ease;
+}
+
+input[type=checkbox]:checked + .iOSLikeCheckBox {
+    border: 2px solid var(--accentColor);
+    background-color: var(--accentColor);
+}
+
+input[type=checkbox]:checked + .iOSLikeCheckBox::after {
+    left: 50%;
+}
