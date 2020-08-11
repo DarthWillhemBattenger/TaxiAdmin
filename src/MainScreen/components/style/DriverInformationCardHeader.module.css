@@ -86,12 +86,12 @@
     transition: transform 0.1s ease-in, border 0.1s ease-in, background-color 0.1s ease-in, box-shadow 0.1s ease-in;
 }
 
-.headerButtonsGroup > .secondButton:hover {
+.buttonsGroup > .secondButton:hover {
     background-color: var(--accentColorHover);
     border: 1px solid #FFFFFF00;
     box-shadow: var(--accentBoxShadow);
 }
 
-.headerButtonsGroup > .secondButton:hover > .arrow {
+.buttonsGroup > .secondButton:hover > .arrow {
     transform: rotate(180deg);
 }
