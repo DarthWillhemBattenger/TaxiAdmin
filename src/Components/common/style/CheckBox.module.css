@@ -93,7 +93,7 @@ input[type=checkbox] + .iOSLikeCheckBox {
     background-color: var(--defaultBackgroundColor);
     border: 2px solid var(--horizontalLineColor);
     border-radius: 99999em;
-    transition: background-color 0.3s ease, border 0.3s ease;
+    transition: background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
     outline: 0;
     cursor: pointer;
     user-select: none;
@@ -120,4 +120,8 @@ input[type=checkbox]:checked + .iOSLikeCheckBox {
 
 input[type=checkbox]:checked + .iOSLikeCheckBox::after {
     left: 50%;
+}
+
+.iOSLikeCheckBox:hover::after {
+    box-shadow: var(--accentBoxShadow) !important;
 }
