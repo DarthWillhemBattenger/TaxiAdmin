@@ -4,6 +4,7 @@ import {HorizontalSpacer} from '../../Components/common/inCard/HorizontalSpacer'
 import starIcon from '../../Assets/icons/star.svg';
 import arrowIcon from '../../Assets/icons/arrowDown.svg';
 import { ButtonFilled, UniversalButton } from '../../Components/common/Buttons';
+import { Card } from '../../Components/common/Card';
 
 const DriverInformationCardHeader = (props) => {
     return (
@@ -33,6 +34,12 @@ const DriverInformationCardHeader = (props) => {
                         arrow icon
                     </object>
                 </UniversalButton>
+                <Card className={s.contextMenu}>
+                    <p>Отметить, как недобросовестное</p>
+                    <p>Обратиться к администратору</p>
+                    <p>Вернуть</p>
+                    <p>Удалить</p>
+                </Card>
             </div>
         </HorizontalSpacer>
     );
