@@ -1,0 +1,235 @@
+.container {
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/* Header */
+
+h2 {
+    padding: 25px 60px 21px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1.66666;
+    letter-spacing: 0.015em;
+    color: var(--mainColor);
+}
+
+.container > h3 {
+    font-family: var(--headerFont);
+    padding: 25px 25px 0 25px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.015em;
+    color: var(--inputLineColor);
+}
+
+/* Trip Points */
+
+.tripPointsContainer {
+    display: flex;
+    padding: 35px;
+}
+
+.tripPointsContainer > .wayPointsDecorationLine {
+    flex: 0 0 35px;
+    margin-right: 35px;
+    margin-top: 13px;
+    margin-bottom: 9px;
+    position: relative;
+    left: 17.5px;
+    border-left: 5px dashed var(--mainColor);
+}
+
+.tripPointsContainer > .wayPointsDecorationLine::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -18px;
+    width: 31px;
+    height: 31px;
+    background-color: var(--mainColor);
+    border-radius: 99999em;
+    border: 10px solid var(--accentColor);
+}
+
+.tripPointsContainer > .wayPointsDecorationLine::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -18px;
+    width: 31px;
+    height: 31px;
+    background-color: var(--accentColor);
+    border-radius: 99999em;
+    border: 10px solid var(--mainColor);
+}
+
+.tripPointsContainer > .wayPointsList {
+    flex: 1 1 calc(100% - 35px);
+}
+
+.wayPointsList > .wayPointsListElement {
+    padding: 15px 0;
+    position: relative;
+}
+
+.wayPointsList > .wayPointsListElement:not(:last-child) {
+    border-bottom: 1px solid var(--mutedColor);
+}
+
+.wayPointsListElement > p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.1875;
+    letter-spacing: 0.015em;
+    color: var(--mainColor);
+}
+
+.wayPointsListElement > h3 {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.015em;
+    color: var(--mainColor);
+    cursor: pointer;
+}
+
+.wayPointsListElement > h3::after {
+    content: "×";
+    position: absolute;
+    left: -24px;
+    bottom: -1px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--mutedColor);
+    transform: rotate(45deg);
+}
+
+/* Horizontal Card Slider */
+
+.cardsHorizontalSliderHolder {
+    position: relative;
+}
+
+.cardsHorizontalSliderHolder::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 20px;
+    height: calc(100% - 8px);
+    width: 25px;
+    background: linear-gradient(90deg, var(--componentBackgroundColor), #FFFFFF00);
+}
+
+.cardsHorizontalSliderHolder::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 20px;
+    height: calc(100% - 8px);
+    width: 25px;
+    background: linear-gradient(-90deg, var(--componentBackgroundColor), #FFFFFF00);
+}
+
+.cardsHorizontalSlider {
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 10px 25px;
+    margin: 0 20px;
+}
+
+.cardsHorizontalSlider::-webkit-scrollbar {
+    height: 8px;
+    padding: 0 1px 20px 1px;
+}
+
+.cardsHorizontalSlider::-webkit-scrollbar-thumb {
+    border-radius: 9999rem;
+    background-color: var(--mutedColor);
+}
+
+.cardsHorizontalSlider > .cardVariant {
+    margin-right: 16px;
+    padding: 5px 9px;
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-shadow: var(--hightContrastBoxShadow);
+    cursor: pointer;
+    transition: background-color 0.1s ease-in, box-shadow 0.1s ease-in;
+}
+
+.cardsHorizontalSlider > .cardVariant:hover, .cardsHorizontalSlider > .cardVariant:active {
+    background-color: var(--accentColor);
+    box-shadow: var(--accentBoxShadow);
+}
+
+.cardVariant > h3 {
+    flex: 0 0 auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1.2083;
+    letter-spacing: 0.015em;
+    white-space: nowrap;
+    color: var(--inputLineColor);
+}
+
+.cardVariant > img {
+    flex: 0 0 auto;
+    align-self: center;
+}
+
+.cardVariant > p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.015em;
+    color: var(--mutedColor);
+}
+
+/* Options Block */
+
+.orderOptionsList {
+    padding: 0 25px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.1875;
+    letter-spacing: 0.015em;
+}
+
+.orderOptionsList > .orderOptionsListElement {
+    position: relative;
+    padding: 1.4em 0 8px;
+    border-bottom: 1px solid var(--horizontalLineColor);
+}
+
+.orderOptionsListElement > p {
+    color: var(--mutedColor);
+}
+
+.orderOptionsListElement > .iosCheckbox {
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+}

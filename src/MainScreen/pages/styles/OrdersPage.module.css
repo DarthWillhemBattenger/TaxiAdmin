@@ -7,19 +7,7 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: stretch;
-}
-
-.cardContainer > div {
-    flex: 0 0 33.3333%
-}
-
-.cardContainer > div {
-    flex: 0 0 calc(33.3333% - 26.6666px);
-    margin-right: 40px;
-}
-
-.cardContainer > div:last-child {
-    margin-right: 0;
+    position: relative;
 }
 
 .card {
@@ -28,11 +16,12 @@
     max-height: 83vh;
 }
 
-.card:nth-child(1) {
+.cardContainer > .ordersContainer {
     flex: 1 0 33.3333%;
+    margin-right: 40px;
 }
 
-.card:nth-child(2) {
+.cardContainer > .orderInfoCard {
     flex: 1 0 calc(66.6666% - 40px);
 }
 

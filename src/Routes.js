@@ -8,6 +8,7 @@ import { DriversPage } from './MainScreen/pages/DriversPage';
 import { OrdersPage } from './MainScreen/pages/OrdersPage';
 import { TripsPage } from './MainScreen/pages/TripsPage';
 import { FinancesPage } from './MainScreen/pages/FinancesPage';
+import { OrdersPageCreateOrder } from './MainScreen/pages/OrdersPageCreateOrder';
 
 const Routes = ({isAuth}) => {
     if (isAuth) {
@@ -22,6 +23,11 @@ const Routes = ({isAuth}) => {
                 <Route exact path="/main/orders">
                     <OrdersPage />
                 </Route>
+                {/* temporary page */}
+                <Route exact path="/main/createOrder">
+                    <OrdersPageCreateOrder />
+                </Route>
+                {/* temporary page */}
                 <Route exact path="/main/trips">
                     <TripsPage />
                 </Route>
