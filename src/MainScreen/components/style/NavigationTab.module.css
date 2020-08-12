@@ -5,6 +5,7 @@
 
 .navigationTab {
     /*height: 58px;*/
+    display: block;
     padding: 17px;
     margin-bottom: 24px;
     font-family: var(--mainFontFamily);

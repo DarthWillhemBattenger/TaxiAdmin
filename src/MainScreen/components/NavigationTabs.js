@@ -6,47 +6,44 @@ const navigationTabs = [
     {
         id: "hoadfbgjllnn926935786",
         name: "Таблицы и Аналитика",
-        path: "/main/analytics",
-        selected: false
+        path: "/main/analytics"
     },
     {
         id: "hoadfbgjllnn9269357861",
         name: "События",
-        path: "/main/events",
-        selected: true
+        path: "/main/events"
     },
     {
         id: "hoadfbgjllnn9269357862",
         name: "Водители",
-        path: "/main/drivers",
-        selected: false
+        path: "/main/drivers"
     },
     {
         id: "hoadfbgjllnn9269357863",
         name: "Заказы",
-        path: "/main/orders",
-        selected: false
+        path: "/main/orders"
     },
     {
         id: "hoadfbgjllnn9269357864",
         name: "Поездки",
-        path: "/main/trips",
-        selected: false
+        path: "/main/trips"
     },
     {
         id: "hoadfbgjllnn9269357865",
         name: "Финансы и транзакции",
-        path: "/main/finance",
-        selected: false
+        path: "/main/finance"
     }
 ];
-//name, selected, path
+//name, path
 
 const NavigationTabs = () => {
+
+
+
     return (
         <div className={s.tabsContainer}>
             {navigationTabs.map((navigationTab) => (
-                <NavigationTab key={navigationTab.id} name={navigationTab.name} selected={navigationTab.selected} path={navigationTab.path}/>
+                <NavigationTab key={navigationTab.id} name={navigationTab.name} path={navigationTab.path}/>
             ))}
         </div>
     )
