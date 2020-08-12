@@ -116,7 +116,7 @@ const OrdersPage = () => {
         <div className={s.container}>
             <SearchBar />
             <div className={s.cardContainer}>
-                <Card className={s.card}>
+                <Card className={`${s.card} ${s.ordersContainer}`}>
                     <HorizontalSpacer className={s.cardHeadSpacer}>
                         <h3>Заказы</h3>
                     </HorizontalSpacer>
@@ -127,7 +127,7 @@ const OrdersPage = () => {
                     </ScrollableElement>
                     <BottomGradient />
                 </Card>
-                <Card className={s.card}>
+                <Card className={`${s.card} ${s.orderInfoCard}`}>
                     <CloseButton />
                     <HorizontalSpacer className={s.orderInfo}>
                         <h3>№{longTrips[0].tripNumber}</h3>

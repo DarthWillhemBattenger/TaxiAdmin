@@ -116,28 +116,12 @@ const longTrips = [
     }
 ];
 
-/*
-{
-    id: "blgjkbldgjkahlghajkg1231",
-    tripNumber: "23545",
-    tripTime: 3612325,
-    fromPoint: "Попова, 27",
-    toPoint: "Старцева, 110",
-    tripCost: 680,
-    rating: 4,
-    driver: "Иванов Иван Иванович",
-    GosNumber: "Н 150 РУ 777",
-    driverAuto: "Kia Rio",
-    isImportant: false
-}
-*/
-
 const TripsPage = () => {
     return (
         <div className={s.container}>
             <SearchBar />
             <div className={s.cardContainer}>
-                <Card className={s.card}>
+                <Card className={`${s.card} ${s.tripsContainer}`}>
                     <HorizontalSpacer className={s.cardHeadSpacer}>
                         <h3>Заказы</h3>
                     </HorizontalSpacer>
@@ -148,7 +132,7 @@ const TripsPage = () => {
                     </ScrollableElement>
                     <BottomGradient />
                 </Card>
-                <Card className={s.card}>
+                <Card className={`${s.card} ${s.tripInfoCard}`}>
                     <CloseButton />
                     <HorizontalSpacer className={s.orderInfo}>
                         <h3>№{longTrips[0].tripNumber}</h3>
@@ -181,7 +165,7 @@ const TripsPage = () => {
                     <div className={s.buttonsContainer}>
                         <div className={s.checkBoxWithLabelContainer}>
                             <div className={s.description}>Важно для других диспетчеров</div>
-                            <CheckBox className={s.checkBox} checkBoxId="animatedCheckBox"/>
+                            <CheckBox className={s.checkBox} checkBoxId="animatedCheckBox" isiOSLikeCheckbox={false} />
                         </div>
                         <UniversalButton additionClassName={s.callToDriverButton}>
                             Звонок водителю
