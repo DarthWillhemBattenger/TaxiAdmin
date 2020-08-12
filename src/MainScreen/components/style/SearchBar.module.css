@@ -4,7 +4,6 @@
     margin-bottom: 22px;
     border-radius: 10px;
     display: flex;
-    overflow: hidden;
 }
 
 .searchIconPlace {
@@ -31,7 +30,17 @@
     outline: none;
 }
 
-.filtersButton {
+/* Buttons Container */
+
+.buttonsContainer {
+    position: relative;
+}
+
+.buttonsContainer > button:last-of-type {
+    border-radius: 0 10px 10px 0;
+}
+
+.buttonsContainer > .filtersButton {
     position: relative;
     height: 100%;
     padding: 17px;
@@ -46,7 +55,7 @@
     transition: ease-in 0.1s background-color;
 }
 
-.filtersButton:after {
+.buttonsContainer > .filtersButton:after {
     position: absolute;
     content: "";
     top: 8px;
@@ -63,4 +72,61 @@
 
 .filtersButton:hover::after {
     opacity: 0;
+}
+
+/* Hover Menu */
+
+.hoverMenu {
+    position: absolute;
+    top: 3.5em;
+    right: 0;
+    z-index: 999;
+    padding: 24px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: top 0.2s ease-in, opacity 0.2s ease-in;
+    box-shadow: var(--hightContrastBoxShadow);
+}
+
+.filtersButton:hover + .hoverMenu {
+    top: 4.5em;
+    opacity: 1;
+}
+
+.hoverMenu > h5 {
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.015em;
+    color: var(--mainColor);
+}
+
+.hoverMenu > h5:not(:first-child) {
+    margin-top: 32px;
+}
+
+.hoverMenu > .checkbox {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 26px;
+    right: 26px;
+}
+
+.hoverMenu > h5 + input {
+    margin-top: 16px;
+}
+
+.hoverMenu > h5 + input + input {
+    margin-left: 1em;
+}
+
+.hoverMenu > .singleInputField + input {
+    width: 100%;
+}
+
+.hoverMenu .searchButton {
+    margin-top: 16px;
+    box-shadow: var(--accentBoxShadow);
 }
