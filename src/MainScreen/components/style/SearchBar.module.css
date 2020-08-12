@@ -80,17 +80,18 @@
     position: absolute;
     top: 3.5em;
     right: 0;
-    z-index: 999;
+    z-index: -999;
     padding: 24px;
     white-space: nowrap;
     opacity: 0;
-    transition: top 0.2s ease-in, opacity 0.2s ease-in;
+    /*transition: top 0.2s ease-in, opacity 0.2s ease-in;*/
     box-shadow: var(--hightContrastBoxShadow);
 }
 
 .filtersButton:hover + .hoverMenu {
-    top: 4.5em;
-    opacity: 1;
+    /*top: 4.5em;
+    opacity: 1;*/
+    animation: hoverMenuAnimation 0.2s ease-in 0s forwards;
 }
 
 .hoverMenu > h5 {
@@ -129,4 +130,25 @@
 .hoverMenu .searchButton {
     margin-top: 16px;
     box-shadow: var(--accentBoxShadow);
+}
+
+@keyframes hoverMenuAnimation {
+    0% {
+        visibility: hidden;
+        top: 3.5em;
+        opacity: 0;
+        z-index: 999;
+    }
+    1% {
+        visibility: visible;
+        top: 3.5em;
+        opacity: 0;
+        z-index: 999;
+    }
+    100% {
+        visibility: visible;
+        top: 4.5em;
+        opacity: 1;
+        z-index: 999;
+    }
 }
