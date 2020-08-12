@@ -18,8 +18,6 @@
 
 .headerInfoGroup > .mainInformation {
     padding: 0 24px 0 24px;
-    display: flex;
-    flex-direction: column;
 }
 
 .mainInformation > h3 {
@@ -33,9 +31,7 @@
 }
 
 .phoneAndRating {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -45,13 +41,15 @@
 }
 
 .phoneAndRating > .phone {
-    flex: 1 0 auto;
+    color: var(--mutedColor);
 }
 
 .phoneAndRating > .rating {
-    flex: 0 0 auto;
     display: flex;
     align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: -1px;
 }
 
 .buttonsGroup {
