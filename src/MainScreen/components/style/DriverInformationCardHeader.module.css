@@ -79,14 +79,21 @@
     color: var(--mutedColor);
 }
 
+/*  
+!!!!!!!!!!!!!!!!!!!!
+    Need to onClick & pointer fix
+!!!!!!!!!!!!!!!!!!!!
+*/
+
 .secondButton > .arrow {
     margin-left: 16px;
     width: 14px;
+    pointer-events: bounding-box;
     cursor: pointer;
     transition: transform 0.1s ease-in, border 0.1s ease-in, background-color 0.1s ease-in, box-shadow 0.1s ease-in;
 }
 
-.secondButton + .contextMenu {
+/*.secondButton + .contextMenu {
     position: absolute;
     z-index: -999;
     bottom: -9em;
@@ -94,7 +101,6 @@
     padding: 20px;
     box-shadow: var(--hightContrastBoxShadow);
     opacity: 0;
-    /*transition: opacity 0.2s ease-in, bottom 0.2s ease-in;*/
 }
 .secondButton + .contextMenu > p:not(:last-child) {
     margin-bottom: 20px;
@@ -111,9 +117,37 @@
 }
 
 .secondButton:hover + .contextMenu {
-    /*bottom: -10em;
-    opacity: 1;*/
     animation: hoverMenuAnimation 0.2s ease-in 0s forwards;
+}*/
+
+.secondButton + .contextMenu {
+    position: absolute;
+    z-index: 20;
+    bottom: -9em;
+    left: 88px;
+    padding: 20px;
+    box-shadow: var(--hightContrastBoxShadow);
+    opacity: 0;
+    animation: hoverMenuAnimation 0.2s ease-in 0s forwards;
+}
+.secondButton + .contextMenu > p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.buttonsGroup > .secondButton:hover {
+    background-color: var(--accentColorHover);
+    border: 1px solid #FFFFFF00;
+    box-shadow: var(--accentBoxShadow);
+}
+
+.buttonsGroup > .secondButton.openMenu {
+    background-color: var(--accentColor);
+    border: 1px solid #FFFFFF00;
+    box-shadow: var(--accentBoxShadow);
+}
+
+.buttonsGroup > .secondButton.openMenu > .arrow {
+    transform: rotate(180deg);
 }
 
 @keyframes hoverMenuAnimation {

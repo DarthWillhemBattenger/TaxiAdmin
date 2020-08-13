@@ -8,6 +8,7 @@
 
 .searchIconPlace {
     padding: 19px;
+    user-select: none;
 }
 
 .container > input {
@@ -34,6 +35,10 @@
 
 .buttonsContainer {
     position: relative;
+}
+
+.buttonsContainer > button {
+    outline: none;
 }
 
 .buttonsContainer > button:last-of-type {
@@ -66,17 +71,17 @@
     transition: ease-in 0.1s opacity;
 }
 
-.filtersButton:hover {
+.filtersButton:hover, .filtersButton.openMenu {
     background-color: var(--accentColorHover);
 }
 
-.filtersButton:hover::after {
+.filtersButton:hover::after, .filtersButton.openMenu::after {
     opacity: 0;
 }
 
 /* Hover Menu */
 
-.hoverMenu {
+/*.hoverMenu {
     position: absolute;
     top: 3.5em;
     right: 0;
@@ -84,14 +89,26 @@
     padding: 24px;
     white-space: nowrap;
     opacity: 0;
-    /*transition: top 0.2s ease-in, opacity 0.2s ease-in;*/
     box-shadow: var(--hightContrastBoxShadow);
 }
 
 .filtersButton:hover + .hoverMenu {
-    /*top: 4.5em;
-    opacity: 1;*/
     animation: hoverMenuAnimation 0.2s ease-in 0s forwards;
+}*/
+
+.filtersButton.openMenu + .hoverMenu {
+    animation: hoverMenuAnimation 0.2s ease-in 0s forwards;
+}
+
+.hoverMenu {
+    position: absolute;
+    top: 4.5em;
+    right: 0;
+    z-index: 10;
+    padding: 24px;
+    white-space: nowrap;
+    opacity: 1;
+    box-shadow: var(--hightContrastBoxShadow);
 }
 
 .hoverMenu > h5 {
