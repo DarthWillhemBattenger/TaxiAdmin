@@ -137,18 +137,18 @@
         visibility: hidden;
         top: 3.5em;
         opacity: 0;
-        z-index: 999;
+        z-index: 9999;
     }
     1% {
         visibility: visible;
         top: 3.5em;
         opacity: 0;
-        z-index: 999;
+        z-index: 9999;
     }
     100% {
         visibility: visible;
         top: 4.5em;
         opacity: 1;
-        z-index: 999;
+        z-index: 9999;
     }
 }
