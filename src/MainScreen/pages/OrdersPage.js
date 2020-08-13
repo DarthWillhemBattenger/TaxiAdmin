@@ -119,6 +119,7 @@ const OrdersPage = () => {
                 <Card className={`${s.card} ${s.ordersContainer}`}>
                     <HorizontalSpacer className={s.cardHeadSpacer}>
                         <h3>Заказы</h3>
+                        <UniversalButton additionClassName={s.createNewOrderButton}linkPath="/main/orders/create" />
                     </HorizontalSpacer>
                     <ScrollableElement>
                         {longTrips.map((trip) => (

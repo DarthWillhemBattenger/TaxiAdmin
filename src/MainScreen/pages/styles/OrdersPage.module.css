@@ -26,6 +26,7 @@
 }
 
 .cardHeadSpacer {
+    position: relative;
     padding: 24px;
 }
 
@@ -35,6 +36,37 @@
     line-height: 1.2803;
     letter-spacing: 0.015em;
     color: var(--inputLineColor);
+}
+
+.cardHeadSpacer > .createNewOrderButton {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 39px;
+    height: 39px;
+    /*font-size: 31px;
+    line-height: 0.67;
+    padding: 10px;
+    transform: rotate(45deg);*/
+    border-radius: 50%;
+    background-color: var(--accentColor);
+    cursor: pointer;
+}
+
+.cardHeadSpacer > .createNewOrderButton::before {
+    position: absolute;
+    content: "×";
+    left: 17%;
+    top: -3%;
+    font-size: 31px;
+    line-height: 0.67;
+    transform-origin: 0 100%;
+    transform: rotate(45deg);
+}
+
+.cardHeadSpacer > .createNewOrderButton:hover {
+    background-color: var(--accentColorHover);
+    box-shadow: var(--accentBoxShadow);
 }
 
 .orderInfo > h3 {

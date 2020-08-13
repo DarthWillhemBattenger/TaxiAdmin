@@ -24,7 +24,7 @@ const Routes = ({isAuth}) => {
                     <OrdersPage />
                 </Route>
                 {/* temporary page */}
-                <Route exact path="/main/createOrder">
+                <Route exact path="/main/orders/create">
                     <OrdersPageCreateOrder />
                 </Route>
                 {/* temporary page */}
