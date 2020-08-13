@@ -50,7 +50,7 @@ const UniversalButton = (props) => {
   if(props.linkPath) {
     return (
       <Link to={props.linkPath}
-            onClick={props.onClickAction}
+            onClick={props.onClick}
             className={`${props.additionClassName} ${s.Button}`}
       >
         {props.children}
@@ -58,7 +58,7 @@ const UniversalButton = (props) => {
     )
   }
   return  (
-    <button type={props.type} onClick={props.onClickAction} className={`${props.additionClassName} ${s.Button}`}>
+    <button type={props.type} onClick={props.onClick} className={`${props.additionClassName} ${s.Button}`}>
       {props.children}
     </button>
   )
