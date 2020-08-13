@@ -238,3 +238,48 @@ h2 {
     right: 0;
     bottom: 8px;
 }
+
+/* Buttons */
+
+.buttonsContainerWrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+}
+
+.buttonsContainer {
+    width: 100%;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: var(--topBoxShadow);
+    background-color: var(--componentBackgroundColor);
+}
+
+.buttonsContainer > .createOrderButton {
+    width: calc(50% - 10px);
+    margin-right: 20px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #FFFFFF00;
+    background-color: var(--accentColor);
+}
+
+.buttonsContainer > .driverButton {
+    width: calc(50% - 10px);
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid var(--inputLineColor);
+    color: var(--inputLineColor);
+}
+
+.buttonsContainer > .createOrderButton:hover, .buttonsContainer > .driverButton:hover {
+    background-color: var(--accentColorHover);
+    box-shadow: var(--accentBoxShadow);
+    border: 1px solid #FFFFFF00;
+}

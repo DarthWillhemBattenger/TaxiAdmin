@@ -11,6 +11,7 @@ import car3 from '../../Assets/images/cars/METRISP_9147 1.png';
 import car4 from '../../Assets/images/cars/pngwing 1.png';
 import car5 from '../../Assets/images/cars/Courier Van 36_3D_p 1.png';
 import { CheckBox } from '../../Components/common/CheckBox';
+import { UniversalButton } from '../../Components/common/Buttons';
 
 const carsVariants = [
     {
@@ -154,6 +155,16 @@ const CreateOrderBlock = (props) => {
                 </div>
             </div>
             <h3>Комментарий</h3>
+            <div className={s.buttonsContainerWrapper}>
+                <div className={s.buttonsContainer}>
+                    <UniversalButton additionClassName={s.createOrderButton}>
+                        Заказать
+                    </UniversalButton>
+                    <UniversalButton additionClassName={s.driverButton}>
+                        Трезвый водитель
+                    </UniversalButton>
+                </div>
+            </div>
         </Card>
     )
 }

@@ -36,6 +36,7 @@ code {
   --headerFont: 'Lato-bold', sans-serif;
   --mainBoxShadow: 0 10px 30px #CECECE40;
   --hightContrastBoxShadow: 0 10px 15px #0000000D;
+  --topBoxShadow: 0px 0px 15px 5px #00000060;
   --navigationBoxShadow: 10px 0 30px 0px #CECECE40;
   --accentBoxShadow: 0 5px 15px #EEC94680;
 }
