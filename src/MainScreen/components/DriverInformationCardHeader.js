@@ -10,6 +10,21 @@ const DriverInformationCardHeader = (props) => {
 
     const [openMenu, setOpenMenu] = useState(false);
 
+    document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (document.querySelector(`.${s.contextMenu}`) != null) {
+            if (
+                !(
+                    target === document.querySelector(`.${s.contextMenu}`) ||
+                    target === document.querySelector(`.${s.secondButton}`) ||
+                    document.querySelector(`.${s.contextMenu}`).contains(target)
+                )
+            ) {
+                setOpenMenu(false);
+            }
+        }
+    });
+
     return (
         <HorizontalSpacer className={s.cardHeadSpacer}>
             <div className={s.headerInfoGroup}>

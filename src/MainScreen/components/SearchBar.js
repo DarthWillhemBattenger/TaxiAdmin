@@ -16,7 +16,22 @@ const SearchBar = () => {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
 
-    const [openMenu, setOpenMenu] = useState(false)
+    const [openMenu, setOpenMenu] = useState(false);
+
+    document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (document.querySelector(`.${s.hoverMenu}`) != null) {
+            if (
+                !(
+                    target === document.querySelector(`.${s.hoverMenu}`) ||
+                    target === document.querySelector(`.${s.filtersButton}`) ||
+                    document.querySelector(`.${s.hoverMenu}`).contains(target)
+                )
+            ) {
+                setOpenMenu(false);
+            }
+        }
+    });
 
     return (
         <Card className={s.container}>
